@@ -449,3 +449,4 @@ function Player:wanted(actor,reason,time) end
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Server/warrant)
 function Player:warrant(warranter,reason) end
 
+
