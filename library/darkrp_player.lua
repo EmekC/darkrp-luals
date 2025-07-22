@@ -123,15 +123,15 @@ function Player:finishHit() end
 
 ---![(Realm)](https:https://upload.wikimedia.org/wikipedia/commons/4/49/Error.png)
 --- Get the agenda a player manages.
----@param agenda table -- The agenda.
+---@return table agenda The agenda.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getAgenda)
-function Player:getAgenda(agenda) end
+function Player:getAgenda() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the agenda a player can see. Note: when a player is not the manager of an agenda, it returns the agenda of the manager.
----@param agenda table -- The agenda.
+---@return table agenda The agenda.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getAgendaTable)
-function Player:getAgendaTable(agenda) end
+function Player:getAgendaTable() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the value of a DarkRPVar, which is shared between server and client.
@@ -152,33 +152,33 @@ function Player:getEyeSightHitEntity(searchDistance,hitDistance,filter) end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/9f/NewerServer.png)
 --- Get the customer for the current hit
----@param customer Player -- The customer for the current hit
+---@return Player customer The customer for the current hit
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Server/getHitCustomer)
-function Player:getHitCustomer(customer) end
+function Player:getHitCustomer() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the price the hitman demands for his work.
----@param price number -- The price of the next hit.
+---@return number price The price of the next hit.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getHitPrice)
-function Player:getHitPrice(price) end
+function Player:getHitPrice() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the target of a hitman.
----@param target Player -- The target of the hit.
+---@return Player target The target of the hit.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getHitTarget)
-function Player:getHitTarget(target) end
+function Player:getHitTarget() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the job table of a player.
----@param job table -- Table with the job information ( The table structure is something similar when you create the job but parsed in some sections ) .
+---@return table job Table with the job information ( The table structure is something similar when you create the job but parsed in some sections ) .
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getJobTable)
-function Player:getJobTable(job) end
+function Player:getJobTable() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get a player's pocket items.
----@param items table -- A table containing crucial information about the items in the pocket.
+---@return table items A table containing crucial information about the items in the pocket.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getPocketItems)
-function Player:getPocketItems(items) end
+function Player:getPocketItems() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/9f/NewerServer.png)
 --- Get the preferred model of a player for a job.
@@ -189,9 +189,9 @@ function Player:getPreferredModel(TeamNr) end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Get the reason why someone is wanted
----@param answer string -- The reason
+---@return string answer The reason
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/getWantedReason)
-function Player:getWantedReason(answer) end
+function Player:getWantedReason() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether the player has a certain privilege.
@@ -202,9 +202,9 @@ function Player:hasDarkRPPrivilege(priv) end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this hitman has a hit.
----@param answer boolean -- Whether this player has a hit.
+---@return boolean answer Whether this player has a hit.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/hasHit)
-function Player:hasHit(answer) end
+function Player:hasHit() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/9f/NewerServer.png)
 --- Makes the player slightly more hungry. Called in a timer by default.
@@ -218,57 +218,57 @@ function Player:initiateTax() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is arrested
----@param answer boolean -- Whether this player is arrested
+---@return boolean answer Whether this player is arrested
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isArrested)
-function Player:isArrested(answer) end
+function Player:isArrested() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is a Chief.
----@param answer boolean -- Whether this player is a Chief.
+---@return boolean answer Whether this player is a Chief.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isChief)
-function Player:isChief(answer) end
+function Player:isChief() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is a cook. This function is only available if hungermod is enabled.
----@param answer boolean -- Whether this player is a cook.
+---@return boolean answer Whether this player is a cook.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isCook)
-function Player:isCook(answer) end
+function Player:isCook() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is part of the police force (mayor, cp, chief).
----@param answer boolean -- Whether this player is part of the police force.
+---@return boolean answer Whether this player is part of the police force.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isCP)
-function Player:isCP(answer) end
+function Player:isCP() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is a hitman.
----@param answer boolean -- Whether this player is a hitman.
+---@return boolean answer Whether this player is a hitman.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isHitman)
-function Player:isHitman(answer) end
+function Player:isHitman() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/90/NewerClient.png)
 --- Whether the player is in the same room as the LocalPlayer.
----@param inRoom boolean -- Whether the player is in the same room.
+---@return boolean inRoom Whether the player is in the same room.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Client/isInRoom)
-function Player:isInRoom(inRoom) end
+function Player:isInRoom() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is a mayor.
----@param answer boolean -- Whether this player is a mayor.
+---@return boolean answer Whether this player is a mayor.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isMayor)
-function Player:isMayor(answer) end
+function Player:isMayor() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is a medic.
----@param answer boolean -- Whether this player is a medic.
+---@return boolean answer Whether this player is a medic.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isMedic)
-function Player:isMedic(answer) end
+function Player:isMedic() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Whether this player is wanted
----@param answer boolean -- Whether this player is wanted
+---@return boolean answer Whether this player is wanted
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/isWanted)
-function Player:isWanted(answer) end
+function Player:isWanted() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/9f/NewerServer.png)
 --- Unown every door and vehicle owned by this player.
@@ -381,9 +381,9 @@ function Player:setSelfDarkRPVar(variable,value) end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/0/0d/NewerShared.png)
 --- Retrieve a player's real (steam) name.
----@param name string -- The player's steam name.
+---@return string name The player's steam name.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Shared/SteamName)
-function Player:SteamName(name) end
+function Player:SteamName() end
 
 ---![(Realm)](https://static.wikitide.net/darkrpwiki/9/90/NewerClient.png)
 --- Stop drawing the hit information above a hitman.
@@ -448,3 +448,4 @@ function Player:wanted(actor,reason,time) end
 ---@param reason string -- The reason for the warrant.
 ---[wiki](https://darkrp.miraheze.org/wiki/Functions/Player/Server/warrant)
 function Player:warrant(warranter,reason) end
+
